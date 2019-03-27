@@ -7,7 +7,14 @@ let formHtml = `<fieldset>
 </fieldset>
 <fieldset>
 <label for="lego__color">Color:</label>
-<input id="lego__color" name="lego__color" type="text" autofocus />
+<select id="lego__color">
+    <option value="1">Red</option>
+    <option value="2">Green</option>
+    <option value="3">Yellow</option>
+    <option value="4">Blue</option>
+    <option value="5">Orange</option>
+    <option value="6">Black</option>
+</select>
 </fieldset>
 <fieldset>
 <label for="lego__shape">Shape:</label>
@@ -17,7 +24,6 @@ let formHtml = `<fieldset>
 <label for="lego__creation">Creation:</label>
 <input id="lego__creation" name="lego__creation" type="text" autofocus />
 </fieldset>
-
 <button class="btn lego__save">Save Lego Creation</button>`;
 
 displayContainer.innerHTML = formHtml;
@@ -38,7 +44,7 @@ document.querySelector(".lego__save").addEventListener("click", event => {
   const colorToSave = document.querySelector("#lego__color").value;
   const shapeToSave = document.querySelector("#lego__shape").value;
   const creationToSave = document.querySelector("#lego__creation").value;
-
+  // console.log(colorToSave);
   // Once you have collected all the values, build your data structure
   // const legoToSave = {
   //   creator: creatorToSave,
