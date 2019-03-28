@@ -32,7 +32,7 @@ displayContainer.innerHTML = formHtml;
 const createLegoBrick = (creator, color, shape, creation) => {
   return {
     creator: creator,
-    color: color,
+    color: parseInt(color),
     shape: shape,
     creation: creation
   }
